@@ -1,0 +1,20 @@
+.div-button {
+    display: flex;
+}
+
+.btn {
+    display: flex;
+    width: 101px;
+    height: 40px;
+    background: #1890FF;
+    border-radius: 4px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
