@@ -1,13 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-* {
-  font-family: 'Roboto', sans-serif;
+.font-weight-700{
+    font-weight: 700;
 }
 
-h1, h2 {
-  font-weight: 500;
+.font-weight-500{
+    font-weight: 500;
 }
 
-h3, h4, h5, h6 {
-  font-weight: 400;
+.font-weight-400{
+    font-weight: 400;
+}
+
+.btn-link {
+    text-decoration: none;
+}
+
+input[type=text] {
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    border: 1px solid #DDDDDD;
+}
+
+input[type=text]:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border-color: rgba(81, 203, 238, 1);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #BFBFBF;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #BFBFBF;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #BFBFBF;
 }

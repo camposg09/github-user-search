@@ -8,9 +8,8 @@ type Props = {
 const Button = ({ text }: Props) => (
     <div className="div-button">
         <button className="btn">
-            <h5>{text}</h5>
+            <h5 className="font-weight-400">{text}</h5>
         </button>
-
     </div>
 );
 
