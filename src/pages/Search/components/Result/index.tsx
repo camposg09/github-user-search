@@ -6,6 +6,7 @@ import Button from 'core/components/Button';
 import { ErrorResponse } from 'core/types/ErrorObj';
 import ImageLoader from '../Loaders/ImageLoader';
 import InfoLoader from '../Loaders/InfoLoader';
+import dayjs from 'dayjs';
 
 type Props = {
     userName: string;
@@ -15,8 +16,6 @@ const Result = ({ userName }: Props) => {
     const [userData, setUserData] = useState<GitHubUser>();
     const [errorObj, setErrorObj] = useState<ErrorResponse>();
     const [isLoading, setIsLoading] = useState(false);
-
-    console.log(errorObj);
 
     useEffect(() => {
         setIsLoading(true);
@@ -28,7 +27,6 @@ const Result = ({ userName }: Props) => {
             });
     }, [userName]);
 
-    /*if (userData) {*/
     return (
         <div className="result-card">
             <div className="result-col-1">
@@ -87,7 +85,9 @@ const Result = ({ userName }: Props) => {
                                         </li>
                                         <li className="info-card-item">
                                             <div className="list-label">Membro desde:</div>
-                                            <div className="list-data">{userData?.created_at}</div>
+                                            <div className="list-data">
+                                                {dayjs(userData?.created_at).format("DD/MM/YYYY")}
+                                            </div>
 
                                         </li>
                                     </ul>
@@ -99,7 +99,7 @@ const Result = ({ userName }: Props) => {
                                         className="error-message">
                                         We're sorry but your request returned a&nbsp;
                                         {errorObj?.status} error:&nbsp;{errorObj?.statusText}.<br />
-                                        Please verify if the user name you typed is correct!
+                                        Please verify if the user name you typed is correct.
                                     </h1>
                                 </div>
                             )}
