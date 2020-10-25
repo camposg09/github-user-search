@@ -92,3 +92,16 @@
     font-weight: 400;
     color: #737373;
 }
+
+.error-container {
+    display: flex;
+    flex-direction: column; 
+    padding: 10px 15px 0px 15px;
+    margin-left: 40px;
+    background-color: #ff978f;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+.error-message {
+    color: #FFF;
+}
